@@ -1,0 +1,31 @@
+<DOCTYPE html>
+<?php
+// CAPTAIN SLOG
+// vim: set expandtab tabstop=4 shiftwidth=4 autoindent smartindent:
+// File         : index.php
+// System       : HTML-toolset-new
+// Date         : June 22 2015
+// Author       : Mark Addinall
+// Synopsis     : I have been using my own HTML Toolset for a decade now,
+//                so time to retire it.  I came up wih this set of tools
+//                as being quick, quite lightweight for this day and age,
+//                and seem to play together well.
+               
+     
+require '../vendor/autoloadphp';
+
+    $pdo        =   new PDO($dsn, $username, $password);    // get a database stream or socket
+    $database   =   new NotORM($pdo);                       // and an instance of the db manager
+
+
+    $this_app   =   new Slim(
+                            "MODE"              => '"' . $mode . '"',
+                            "TEMPLATES.PATH"    => '"' . $template_path . '"'
+                        );
+
+
+?>
+
+         
+             
+
